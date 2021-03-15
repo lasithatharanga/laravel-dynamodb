@@ -990,4 +990,9 @@ class DynamoDbQueryBuilder
 
         return $this;
     }
+
+    //this last evaluated key is used to manage pagination eventhough there is no result in the query 
+    public function getLastKey(){
+        return $this->lastEvaluatedKey;
+    }
 }
